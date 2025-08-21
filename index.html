@@ -2,36 +2,84 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Testseite</title>
+  <title>Katzen Galerie</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f4f4f9;
-      color: #333;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #ff9800;
+      color: white;
       text-align: center;
-      padding: 50px;
+      padding: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
     h1 {
-      color: #0066cc;
+      margin: 0;
     }
-    p {
-      font-size: 18px;
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
     }
-    .box {
-      display: inline-block;
+    .card {
       background: white;
       border-radius: 12px;
-      padding: 20px 40px;
+      overflow: hidden;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-top: 30px;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card p {
+      margin: 10px;
+      font-size: 16px;
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      background: #eee;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <div class="box">
-    <h1>Hallo, Welt!</h1>
-    <p>Diese Seite läuft auf <strong>GitHub Pages</strong>.</p>
-    <p>Wenn du das hier siehst, funktioniert dein Webspace 🎉</p>
-  </div>
+  <header>
+    <h1>🐾 Meine Katzen Galerie 🐾</h1>
+    <p>Hier gibt’s nur süße Katzenbilder!</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <img src="https://placekitten.com/400/300" alt="Katze 1">
+      <p>Katze beim Chillen</p>
+    </div>
+    <div class="card">
+      <img src="https://placekitten.com/401/300" alt="Katze 2">
+      <p>Neugierige Katze</p>
+    </div>
+    <div class="card">
+      <img src="https://placekitten.com/402/300" alt="Katze 3">
+      <p>Kuschelige Katze</p>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Meine Katzenseite 🐱 – Gehostet mit GitHub Pages
+  </footer>
 </body>
 </html>
